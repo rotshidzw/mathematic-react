@@ -1,0 +1,36 @@
+.Calculator {
+  display: flex;
+  flex-direction: column;
+}
+
+.Screen-div {
+  padding: 15px;
+  align-self: stretch;
+  background: #8b8888;
+  text-align: end;
+  font-size: 12px;
+  color: #fff;
+}
+
+.Buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  background-color: grey;
+  gap: 1px;
+  padding: 1px;
+}
+
+.Button {
+  min-width: 80px;
+  max-width: 100%;
+  height: 45px;
+  border: none;
+}
+
+.Orange-button {
+  background-color: #f98538;
+}
+
+.Zero {
+  grid-column: 1/span 2;
+}
