@@ -1,12 +1,18 @@
-import './css/App.css';
+import React from 'react';
+import './App.css';
 import Calculator from './components/Calculator';
 
-function App() {
-  return (
-    <section className="App">
-      <Calculator />
-    </section>
-  );
+class App extends React.PureComponent {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header" />
+        <main>
+          <Calculator />
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;

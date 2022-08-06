@@ -1,47 +1,38 @@
 import React from 'react';
-import '../css/Calculator.css';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      buttons: [
-        'AC', '+/-', '%', '\u00F7', '7', '8', '9', '\u00D7',
-        '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '=',
-      ],
-      orangeButtons: ['\u00F7', '\u00D7', '-', '+', '='],
-    };
-
-    this.classNamesCreate = this.classNamesCreate.bind(this);
-  }
-
-  classNamesCreate(button) {
-    const { orangeButtons } = this.state;
-    if (orangeButtons.includes(button)) {
-      return 'Button Orange-button';
-    }
-    if (button === '0') {
-      return 'Button Zero';
-    }
-    return 'Button';
-  }
-
+class Calculator extends React.PureComponent {
   render() {
-    const { buttons } = this.state;
     return (
-      <div className="Calculator">
-        <div className="Screen-div">0</div>
-        <div className="Buttons-grid">
-          {buttons.map((button) => (
-            <button
-              key={button}
-              className={this.classNamesCreate(button)}
-              type="button"
-            >
-              {button}
-            </button>
-          ))}
-
+      <div className="Cal-container">
+        <div className="Cal-answer">0</div>
+        <div className="Cal-input-row row-1">
+          <button type="button">AC</button>
+          <button type="button">+/-</button>
+          <button type="button">%</button>
+          <button type="button">&#247;</button>
+        </div>
+        <div className="Cal-input-row row-2">
+          <button type="button">1</button>
+          <button type="button">2</button>
+          <button type="button">3</button>
+          <button type="button">&times;</button>
+        </div>
+        <div className="Cal-input-row row-3">
+          <button type="button">4</button>
+          <button type="button">5</button>
+          <button type="button">6</button>
+          <button type="button">-</button>
+        </div>
+        <div className="Cal-input-row row-4">
+          <button type="button">7</button>
+          <button type="button">8</button>
+          <button type="button">9</button>
+          <button type="button">+</button>
+        </div>
+        <div className="Cal-input-row row-5">
+          <button type="button">0</button>
+          <button type="button">.</button>
+          <button type="button">=</button>
         </div>
       </div>
     );
