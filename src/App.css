@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.Cal-container {
+  width: 80%;
+  max-width: 400px;
+  margin: 50px auto;
+  border: 2px solid gray;
+}
+
+.Cal-answer {
+  width: 96%;
+  background-color: gray;
+  color: #fff;
+  text-align: end;
+  font-size: 30px;
+  padding: 2%;
+}
+
+.Calculator-inputs-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  background-color: grey;
+  gap: 1px;
+  padding: 1px;
+}
+
+.Cal-input-row button {
+  height: 50px;
+  border: 1px solid gray;
+  font-size: 20px;
+}
+
+.Cal-input-row button:hover {
+  background-color: #e0e0e0;
+}
+
+.Cal-input-row button:active {
+  transition: ease-in-out;
+  transform: scale(0.95);
+}
+
+.Cal-input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.Cal-input-row button:last-child {
+  background-color: #f5913e;
+}
+
+.Cal-input-row.row-5 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
