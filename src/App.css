@@ -1,5 +1,11 @@
 * {
   margin: 0;
+ 
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+   background-color:#ffc371;
 }
 
 .App {
@@ -7,11 +13,89 @@
   margin-top: 50px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .Cal-container {
   width: 80%;
   max-width: 400px;
   margin: 50px auto;
   border: 2px solid gray;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff5f6d;
+  background: -webkit-linear-gradient(to right, #ff5f6d, #ffc371);
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  padding: 20px;
+}
+
+.active {
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  color: rgb(7, 20, 18);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.navibar-nav {
+  display: inline-flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-item {
+  display: inline;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+main {
+  width: 80%;
+  margin: 50px auto;
+  min-height: 500px;
+}
+
+/* quotes section */
+.quote-cont {
+  display: inline-flex;
+  gap: 20px;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.quote-cont li {
+  background-color: rgb(204, 76, 221);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.quote-cont li span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 50px;
+  text-align:center;
 }
 
 .Cal-answer {
@@ -59,3 +143,48 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
 }
+
+footer {
+  padding:30px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+  text-align:center;
+}
+
+a {
+  color: #095484;
+}
+
+a:hover {
+  color: #8ebf42;
+}
+
+a:active {
+  color: #800000;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .navibar-nav {
+    gap: 10px;
+  }
+
+  .nav-item {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  main {
+    width: 90%;
+    margin: 50px auto;
+  }
+}
+
