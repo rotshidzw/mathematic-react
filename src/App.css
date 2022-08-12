@@ -1,11 +1,10 @@
 * {
   margin: 0;
- 
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-   background-color:#ffc371;
+  background-color: #ffc371;
 }
 
 .App {
@@ -15,6 +14,15 @@ body {
 
 a {
   text-decoration: none;
+  color: #095484;
+}
+
+a:hover {
+  color: #8ebf42;
+}
+
+a:active {
+  color: #800000;
 }
 
 .Cal-container {
@@ -29,7 +37,6 @@ a {
   justify-content: space-between;
   align-items: center;
   background: #ff5f6d;
-  background: -webkit-linear-gradient(to right, #ff5f6d, #ffc371);
   background: linear-gradient(to right, #ff5f6d, #ffc371);
   padding: 20px;
 }
@@ -95,7 +102,7 @@ main {
   gap: 30px;
   justify-content: center;
   margin-top: 50px;
-  text-align:center;
+  text-align: center;
 }
 
 .Cal-answer {
@@ -145,22 +152,10 @@ main {
 }
 
 footer {
-  padding:30px 0;
-  color:#f0f9ff;
-  background-color:#282d32;
-  text-align:center;
-}
-
-a {
-  color: #095484;
-}
-
-a:hover {
-  color: #8ebf42;
-}
-
-a:active {
-  color: #800000;
+  padding: 30px 0;
+  color: #f0f9ff;
+  background-color: #282d32;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -187,4 +182,3 @@ a:active {
     margin: 50px auto;
   }
 }
-
