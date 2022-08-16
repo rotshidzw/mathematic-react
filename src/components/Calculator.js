@@ -1,42 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
+import calculate from '../logic/calculate';
 
-class Calculator extends React.PureComponent {
-  render() {
-    return (
-      <div className="Cal-container">
-        <div className="Cal-answer">0</div>
-        <div className="Cal-input-row row-1">
-          <button type="button">AC</button>
-          <button type="button">+/-</button>
-          <button type="button">%</button>
-          <button type="button">&#247;</button>
-        </div>
-        <div className="Cal-input-row row-2">
-          <button type="button">1</button>
-          <button type="button">2</button>
-          <button type="button">3</button>
-          <button type="button">&times;</button>
-        </div>
-        <div className="Cal-input-row row-3">
-          <button type="button">4</button>
-          <button type="button">5</button>
-          <button type="button">6</button>
-          <button type="button">-</button>
-        </div>
-        <div className="Cal-input-row row-4">
-          <button type="button">7</button>
-          <button type="button">8</button>
-          <button type="button">9</button>
-          <button type="button">+</button>
-        </div>
-        <div className="Cal-input-row row-5">
-          <button type="button">0</button>
-          <button type="button">.</button>
-          <button type="button">=</button>
-        </div>
+function Calculator() {
+  const [calculation, setCalculation] = useState({ total: null, next: null, operation: null });
+
+  const handleClick = (e) => {
+    const buttonName = e.currentTarget.textContent;
+    const newState = calculate(calculation, buttonName);
+    setCalculation(newState);
+  };
+
+  const { total, next, operation } = calculation;
+  return (
+    <div className="Cal-container">
+      <div className="Cal-answer">
+        <span>{total}</span>
+        <span>{operation}</span>
+        <span>{!next && !operation && !total ? 0 : next}</span>
       </div>
-    );
-  }
+      <div className="Cal-input-row row-1">
+        <button type="button" onClick={handleClick}>AC</button>
+        <button type="button" onClick={handleClick}>+/-</button>
+        <button type="button" onClick={handleClick}>%</button>
+        <button type="button" onClick={handleClick}>÷</button>
+      </div>
+      <div className="Cal-input-row row-2">
+        <button type="button" onClick={handleClick}>1</button>
+        <button type="button" onClick={handleClick}>2</button>
+        <button type="button" onClick={handleClick}>3</button>
+        <button type="button" onClick={handleClick}>x</button>
+      </div>
+      <div className="Cal-input-row row-3">
+        <button type="button" onClick={handleClick}>4</button>
+        <button type="button" onClick={handleClick}>5</button>
+        <button type="button" onClick={handleClick}>6</button>
+        <button type="button" onClick={handleClick}>-</button>
+      </div>
+      <div className="Cal-input-row row-4">
+        <button type="button" onClick={handleClick}>7</button>
+        <button type="button" onClick={handleClick}>8</button>
+        <button type="button" onClick={handleClick}>9</button>
+        <button type="button" onClick={handleClick}>+</button>
+      </div>
+      <div className="Cal-input-row row-5">
+        <button type="button" onClick={handleClick}>0</button>
+        <button type="button" onClick={handleClick}>.</button>
+        <button type="button" onClick={handleClick}>=</button>
+      </div>
+    </div>
+  );
 }
 
 export default Calculator;
