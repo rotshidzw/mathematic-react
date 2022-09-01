@@ -13,7 +13,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://63108215172e420009d67614--stirring-biscuit-8456de.netlify.app/)
+[Live Demo Link](https://math-megician.netlify.app)
 
 
 ## Getting Started
