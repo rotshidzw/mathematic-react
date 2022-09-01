@@ -13,7 +13,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://rotshidzw.github.io/mathematic-react/)
+[Live Demo Link](stirring-biscuit-8456de.netlify.app)
 
 
 ## Getting Started
